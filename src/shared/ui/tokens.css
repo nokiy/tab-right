@@ -1,0 +1,62 @@
+/* [POS]: Design tokens shared by popup and options — light default, dark via prefers-color-scheme
+*/
+
+:root {
+  --tr-bg: #f6f7fa;
+  --tr-surface: #ffffff;
+  --tr-sunk: #eef0f4;
+  --tr-ink: #1f2329;
+  --tr-muted: #5f6673;
+  --tr-faint: #9aa0aa;
+  --tr-line: #e3e6eb;
+  --tr-line-strong: #cdd2da;
+  --tr-accent: #3d63dd;
+  --tr-accent-soft: #e6ecfc;
+  --tr-on-accent: #ffffff;
+  --tr-track: #c6cbd3;
+  --tr-on: #1b7c4d;
+  --tr-on-soft: #dcf1e5;
+  --tr-warn: #935e00;
+  --tr-warn-soft: #fbeed3;
+  --tr-off: #5f6673;
+  --tr-off-soft: #e9ecf0;
+  --tr-code: #f2f4f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tr-bg: #1b1c1f;
+    --tr-surface: #27292d;
+    --tr-sunk: #313338;
+    --tr-ink: #e6e7ea;
+    --tr-muted: #a3a8b1;
+    --tr-faint: #6f747c;
+    --tr-line: #36393f;
+    --tr-line-strong: #474b52;
+    --tr-accent: #8ea7ff;
+    --tr-accent-soft: #2c3552;
+    --tr-on-accent: #0f1733;
+    --tr-track: #50545c;
+    --tr-on: #72d39f;
+    --tr-on-soft: #1d3829;
+    --tr-warn: #f1b84c;
+    --tr-warn-soft: #3e3119;
+    --tr-off: #a3a8b1;
+    --tr-off-soft: #33363b;
+    --tr-code: #1e2023;
+  }
+}
+
+body {
+  background: var(--tr-bg);
+  color: var(--tr-ink);
+  font-family:
+    system-ui,
+    -apple-system,
+    'PingFang SC',
+    sans-serif;
+}
+
+.tr-mono {
+  font-family: ui-monospace, 'SF Mono', monospace;
+}

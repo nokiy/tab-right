@@ -1,0 +1,52 @@
+{
+  "name": "tab-right",
+  "version": "1.0.0",
+  "description": "Keep new Chrome tabs beside their source and preserve opening order.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "postinstall": "wxt prepare",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "verify": "pnpm type-check && pnpm test && pnpm build",
+    "lint": "echo \"lint is deferred in this refactor; use test/type-check/build as gates\"",
+    "lint:fix": "pnpm lint"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/chrome": "^0.0.323",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^5.2.0",
+    "@wxt-dev/module-react": "^1.2.2",
+    "eslint": "^9.27.0",
+    "jsdom": "^30.1.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.6",
+    "vitest": "^3.2.4",
+    "wxt": "^0.21.4"
+  },
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22.15.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nokiy/tab-right.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nokiy/tab-right/issues"
+  },
+  "homepage": "https://github.com/nokiy/tab-right#readme"
+}

@@ -1,0 +1,187 @@
+/* [POS]: Shared row/card/pill/switch/segmented/notice styles for the src/shared/ui components
+*/
+
+.tr-card {
+  background: var(--tr-surface);
+  border: 1px solid var(--tr-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tr-row {
+  align-items: center;
+  border-bottom: 1px solid var(--tr-line);
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.tr-row:last-child {
+  border-bottom: none;
+}
+
+.tr-row__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tr-row__title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tr-row__desc {
+  color: var(--tr-muted);
+  font-size: 12px;
+}
+
+/* StatusPill: dot + text, colored by run state */
+.tr-pill {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 4px 10px;
+}
+
+.tr-pill__dot {
+  border-radius: 999px;
+  height: 8px;
+  width: 8px;
+}
+
+.tr-pill--running {
+  background: var(--tr-on-soft);
+  color: var(--tr-on);
+}
+
+.tr-pill--running .tr-pill__dot {
+  background: var(--tr-on);
+}
+
+.tr-pill--paused {
+  background: var(--tr-warn-soft);
+  color: var(--tr-warn);
+}
+
+.tr-pill--paused .tr-pill__dot {
+  background: var(--tr-warn);
+}
+
+.tr-pill--off {
+  background: var(--tr-off-soft);
+  color: var(--tr-off);
+}
+
+.tr-pill--off .tr-pill__dot {
+  background: var(--tr-off);
+}
+
+/* SwitchRow: 40x24 toggle */
+.tr-switch {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.tr-switch input {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.tr-switch__track {
+  background: var(--tr-track);
+  border-radius: 999px;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  transition: background 0.15s ease;
+  width: 40px;
+}
+
+.tr-switch__track::after {
+  background: var(--tr-on-accent);
+  border-radius: 999px;
+  content: '';
+  height: 18px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  transition: transform 0.15s ease;
+  width: 18px;
+}
+
+.tr-switch input:checked + .tr-switch__track {
+  background: var(--tr-accent);
+}
+
+.tr-switch input:checked + .tr-switch__track::after {
+  transform: translateX(16px);
+}
+
+.tr-switch input:disabled + .tr-switch__track {
+  opacity: 0.5;
+}
+
+/* PauseControl: segmented duration buttons + active-pause row */
+.tr-segmented {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.tr-segmented__btn {
+  background: var(--tr-sunk);
+  border: 1px solid var(--tr-line);
+  border-radius: 8px;
+  color: var(--tr-ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.tr-segmented__btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tr-pause-active {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.tr-pause-active__time {
+  color: var(--tr-warn);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tr-btn-resume {
+  background: var(--tr-accent-soft);
+  border: 0;
+  border-radius: 8px;
+  color: var(--tr-accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.tr-btn-resume:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* SettingsUnavailable / WriteErrorLine: read or write failures, shown inline */
+.tr-notice--error {
+  color: var(--tr-warn);
+  font-size: 12px;
+  margin: 0;
+}

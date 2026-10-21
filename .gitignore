@@ -1,0 +1,24 @@
+# deps
+node_modules/
+# build
+dist/
+.output/
+.wxt/
+*.tsbuildinfo
+# generated at build time from build/icons/render-icon-svg.ts — never committed
+public/icons/
+# env
+.env
+.env.*
+!.env.example
+# os / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
+# AI config never ships
+CLAUDE.md
+AGENTS.md
+.claude/
+.agent/
+.dev-build-number

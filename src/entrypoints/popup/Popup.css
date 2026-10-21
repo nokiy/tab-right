@@ -1,0 +1,48 @@
+/* [POS]: Popup layout (300px) on top of the shared tokens and components
+*/
+
+@import '../../shared/ui/tokens.css';
+@import '../../shared/ui/components.css';
+
+.tr-popup {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  width: 300px;
+}
+
+.tr-popup__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.tr-popup__brand {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.tr-popup__icon {
+  border-radius: 5px;
+  display: block;
+}
+
+.tr-popup__title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tr-popup__options-link {
+  background: none;
+  border: 0;
+  color: var(--tr-accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 2px;
+  text-align: left;
+}
